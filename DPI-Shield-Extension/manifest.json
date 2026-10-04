@@ -1,0 +1,31 @@
+﻿{
+    "manifest_version":  3,
+    "name":  "DPI Shield — DoH \u0026 DPI Engel Aşıcı",
+    "version":  "1.0.0",
+    "description":  "Sadece Opera tarayıcısı içinde çalışan, tek tıkla başlatılıp durdurulabilen yerel DoH ve DPI engel aşma kontrolcüsü.",
+    "permissions":  [
+                        "proxy",
+                        "storage",
+                        "tabs"
+                    ],
+    "host_permissions":  [
+                             "http://127.0.0.1:10808/*"
+                         ],
+    "background":  {
+                       "service_worker":  "background.js"
+                   },
+    "action":  {
+                   "default_popup":  "popup.html",
+                   "default_title":  "DPI Shield — DoH \u0026 DPI Engel Aşıcı",
+                   "default_icon":  {
+                                        "16":  "icon.png",
+                                        "48":  "icon.png",
+                                        "128":  "icon.png"
+                                    }
+               },
+    "icons":  {
+                  "16":  "icon.png",
+                  "48":  "icon.png",
+                  "128":  "icon.png"
+              }
+}

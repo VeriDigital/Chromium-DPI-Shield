@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Opera DPI & DoH Engel Aşıcı</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="brand">
+        <span class="logo-dot" id="statusDot"></span>
+        <div>
+          <h1>Opera DPI & DoH</h1>
+          <p id="engineStatus">Durum kontrol ediliyor...</p>
+        </div>
+      </div>
+      <span class="badge" id="statusBadge">KAPALI</span>
+    </header>
+
+    <div class="power-section">
+      <button id="toggleBtn" class="power-btn off">
+        <span class="power-icon">⏻</span>
+        <span id="toggleBtnText">BAŞLAT</span>
+      </button>
+      <p class="scope-note">Sadece Opera tarayıcısında çalışır (Tüm PC'yi etkilemez)</p>
+    </div>
+
+    <div class="card" id="currentTabCard" style="display: none;">
+      <div class="card-label">Açık Olan Sekme</div>
+      <div class="tab-row">
+        <span id="currentTabDomain" class="tab-domain">-</span>
+        <button id="toggleTabDomainBtn" class="small-btn">Doğrudan Bağlan (Hariç Tut)</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="card-label">Hariç Tutulan Siteler (DIRECT)</span>
+        <span id="domainCount" class="count-pill">0</span>
+      </div>
+      <div class="add-row">
+        <input type="text" id="domainInput" placeholder="ornek.com ekle..." autocomplete="off" />
+        <button id="addDomainBtn" class="add-btn">Ekle</button>
+      </div>
+      <div id="domainList" class="domain-list"></div>
+    </div>
+
+    <div id="errorBox" class="error-box" style="display: none;"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
